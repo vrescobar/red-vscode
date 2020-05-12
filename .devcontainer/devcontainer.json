@@ -1,0 +1,27 @@
+{
+    "name": "Red Dev",
+    "dockerFile": "Dockerfile",
+    "appPort": [
+        // Add here ports you need to share like 8080, 22 or whatever
+    ],
+    "remoteEnv": {
+        "DISPLAY": "192.168.1.54:0", //if you want to forward X11 set here your ip and :0
+    },
+    "mounts": [
+        // For git ssh key access so you can confortably git push
+        "source=${localEnv:HOME}/.ssh/,target=/root/.ssh/,type=bind,consistency=cached",
+        // This hack (untested) is meant to avoid re-compiling red everytime we rebuild
+        // Use it at your own risk as it might get corrupt or create weird errors
+        // across uncompatible systems or red versions.
+        // "source=${localWorkspaceFolder}/.red/,target=/root/.red/,type=bind,consistency=cached",
+        // VS Code Extensions and Insiders won't need to reinstall
+        // "source=vs-code-extensions,target=/root/.vscode-server/extensions,type=volume",
+        // "source=vs-code-extensions-insiders,target=/root/.vscode-server-insiders/extensions,type=volume",
+    ],
+    "extensions": [
+        "red-auto.red",
+        "editorconfig.editorconfig",
+        "ms-vscode-remote.remote-containers",
+        "malkomalko.send-to-terminal"
+    ]
+}

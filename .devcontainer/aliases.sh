@@ -1,0 +1,11 @@
+unalias -a
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[31m\]\u\[\033[0m\]\[\033[32m\] @ \[\033[34m\]\h\[\033[32m\] :\[\033[33m\] \w\[\033[32m\] \$\[\033[0m\] '
+alias RUN=''
+alias ..='cd ..'
+alias ls='ls --color=auto -G'
+alias less='less -RS'
+alias ll='ls -alFh'
+alias l='ll'
+alias v='vi'
+alias wget='wget -c'
+alias env-update='source /etc/profile;source $HOME/.bashrc'
