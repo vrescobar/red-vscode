@@ -1,4 +1,3 @@
 Red [Needs: 'View]
 
-print "Hello Console"
-view [text "Hello World!"]
+view [ text "hello"  ]

@@ -2,15 +2,20 @@
 
 This repository contains a [Red Language](red-lang.org) hello world script with all the necessary configuration, plugins, and environment for [visual studio code](code.visualstudio.com)
 
-Including, but not limited to,  **all the following features**:
+Just clone this repo and open the folder in VSCode (requires docket), to develop GUI please read the instructions bellow.
 
+`git clone https://github.com/vrescobar/red-vscode.git MyNewProject`
+
+## Features
+
+All plugins and docker provide the next features:
+
+* The newest red language with GTK support (daily build)
 * The latest stable red language (stable build: 0.6.4)
-* The newest red language (daily build)
 * Plugin extension recommendations for Visual Studio Code:
-  * Red language plugin support
+  * Red language plugin support for autocompletion and language server
   * Integration with red's REPL to send selected text to the command line
   * Build commands so you can just selecto how to compile or run your code
-  * A red theme for vscode so you can become inspired
   * A development Docker File (with a vscode extension to run the build and code on that docker)
 
 * The docker development file includes for seamless development of the Red Language, **independently** of the host system:
